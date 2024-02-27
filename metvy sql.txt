@@ -1,0 +1,63 @@
+1)Select * FROM Employees;
+
+2)Select name FROM Employees;
+ 
+3) Select name FROM Employees
+   WHERE salary > 50000 ;
+
+4) SELECT AVG(salary) AS average_salary
+   FROM Employees;
+
+5)SELECT COUNT(DISTINCT city) AS distinct_city_count
+  FROM Locations;
+
+6)SELECT * FROM Departments
+  WHERE department_name = 'IT';
+
+7)-- Top 5 highest salaries
+  SELECT *
+  FROM emp_details_view
+  ORDER BY salary DESC
+  LIMIT 5;
+
+-- Top 5 lowest salaries
+  SELECT *
+  FROM emp_details_view
+  ORDER BY salary ASC
+  LIMIT 5;
+
+8)SELECT *FROM emp_details_view
+  WHERE department_name = 'sales' AND region = 'Europe';
+
+9)SELECT *FROM emp_details_view
+  WHERE commission IS NOT NULL;
+
+10)SELECT department_name, SUM(salary) AS total_salary FROM emp_details_view
+   GROUP BY department_name;
+
+11)SELECT city, SUM(commission) AS total_commission FROM emp_details_view
+   GROUP BY city;
+
+12)SELECT department_name, MAX(salary) AS max_salary, MIN(salary) AS min_salary FROM emp_details_view
+   GROUP BY department_name;
+
+13)SELECT *FROM emp_details_view
+  ORDER BY salary DESC
+  LIMIT 10;
+
+14)SELECT city, salary FROM emp_details_view;
+
+
+15)SELECT department_name, salary FROM emp_details_view
+  GROUP BY department_name
+  ORDER BY salary DESC;
+
+
+
+
+
+
+
+
+
+
